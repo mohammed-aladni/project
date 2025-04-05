@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LAMP EDUCATIONAL AND CHARITABLE TRUST</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">💡LAMP</a>
+  </nav>
+  
+    <ul class="nav-center">
+      <li><a href="#">Admission Guidance</a></li>
+      <li><a href="#">Counselling</a></li>
+      <li><a href="#">Overseas Education</a></li>
+      <li><a href="#">IT Training</a></li>
+      <li><a href="#">Blogs</a></li>
+    </ul>
+  
+
+  <!-- Social Media Sidebar -->
+  <div class="social-bar">
+    <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+    <a href="#"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+    <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+    <a href="#"><img src="icons/pinterest.png" alt="Pinterest"></a>
+  </div>
+
+  <!-- sign Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="welcome">Welcome To </p>
+      <h1>LAMP EDUCATIONAL AND CHARITABLE TRUST<br><span class="highlight">Your Learning</span></h1>
+      <p class="desc">At Enrolify, we provide career counselling, admission assistance, and online training designed to set you on the path to success. Take the first step toward a brighter tomorrow today!</p>
+      <div class="buttons">
+        <a href="#" class="btn primary">Request Consultation</a>
+        <a href="#" class="btn secondary">Apply Now</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/logo.jpg" alt="Student">
+    </div>
+  </section>
+
+
+
+  <!--  lamp Services Section -->
+  <section class="services" id="services">
+    <h2 class="section-title">Explore Our Services</h2>
+    <p class="subtitle">Your Partner in Success—From Guidance to Growth</p>
+    <div class="cards">
+        <div class="card course-card">
+        <h3>Admission Guidance</h3>
+        <p>Get personalized support to secure your spot in your desired program effortlessly.</p>
+      </div>
+      <div class="card">
+        <h3>Counselling</h3>
+        <p>Explore career options with strategic planning from experts.</p>
+      </div>
+      <div class="card">
+        <h3>Overseas Education</h3>
+        <p>Choose the right country and university for your international journey.</p>
+      </div>
+      <div class="card">
+        <h3>Online IT Training</h3>
+        <p>Boost your skills with our online IT training programs.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Why lamp Section -->
+<section class="why-section" id="why">
+    <h2 class="section-title">Why <span>lamp</span></h2>
+    <p class="subtitle">Discover our one-of-a-kind services designed to elevate your educational journey.</p>
+  
+    <div class="carousel-wrapper">
+      <div class="carousel" id="carousel">
+        <div class="why-card">
+          <h3>Expertise & Experience</h3>
+          <p>Leverage our deep knowledge and years of experience for your success.</p>
+        </div>
+        <div class="why-card">
+          <h3>Quality & Reliability</h3>
+          <p>Depend on us for consistently high-quality services you can trust.</p>
+        </div>
+        <div class="why-card">
+          <h3>Trust & Credibility</h3>
+          <p>Build your future with a partner known for integrity and trustworthiness.</p>
+        </div>
+        <div class="why-card">
+          <h3>Aptitude Testing</h3>
+          <p>Assess your strengths with our comprehensive aptitude tests.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- cource lamp Section -->
+  <section class="course-section">
+    <h2>Explore <span class="highlight">Courses</span></h2>
+    <div class="tab-bar" id="tabBar">
+      <button class="tab active" onclick="showCards(event, 'medical')">Medical</button>
+      <button class="tab" onclick="showCards(event, 'engineering')">Engineering</button>
+      <button class="tab" onclick="showCards(event, 'law')">Law</button>
+    </div>
+  
+    <div class="card-container" id="cardContainer">
+      <!-- Cards will be inserted here -->
+    </div>
+  </section>
+  
+  
+  
+
+
+<!-- scroll cards  Section -->
+  <script>
+    const carousel = document.getElementById('carousel');
+    let scrollAmount = 0;
+    const cardWidth = 300; // Adjust based on your card width
+    const scrollStep = cardWidth + 16; // include margin/gap if any
+  
+    setInterval(() => {
+      if (scrollAmount + carousel.offsetWidth >= carousel.scrollWidth) {
+        // Reset to beginning if at end
+        scrollAmount = 0;
+      } else {
+        scrollAmount += scrollStep;
+      }
+  
+      carousel.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    }, 4000);
+  </script>
+
+<!-- cource card Section -->
+  <script>
+  const courseData = {
+    medical: [
+      { title: 'MBBS', subtitle: 'Medical - Bachelor' },
+      { title: 'BDS', subtitle: 'Medical - Bachelor' },
+      { title: 'M.Med', subtitle: 'Medical - Master' },
+    ],
+    engineering: [
+      { title: 'B.Tech', subtitle: 'Engineering - Bachelor' },
+      { title: 'M.Tech', subtitle: 'Engineering - Master' },
+      { title: 'Diploma', subtitle: 'Engineering - Diploma' },
+    ],
+    law: [
+      { title: 'LLB', subtitle: 'Law - Bachelor' },
+      { title: 'LLM', subtitle: 'Law - Master' },
+    ]
+  };
+
+  function showCards(event, category) {
+    const container = document.getElementById('cardContainer');
+    container.innerHTML = '';
+
+    const data = courseData[category];
+    if (!data) return;
+
+    data.forEach(course => {
+      container.innerHTML += `
+        <div class="card">
+          <h3>${course.title}</h3>
+          <p>${course.subtitle}</p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+      `;
+    });
+
+    // Update active tab styling
+    document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+
+  // Default load
+  window.onload = () => {
+    const defaultTab = document.querySelector('.tab.active');
+    if (defaultTab) {
+      defaultTab.click();
+    }
+  };
+</script>
+
+  
+  
+</body>
+</html>
