@@ -312,3 +312,81 @@ body {
     cursor: pointer;
   }
   
+
+
+
+
+
+
+
+
+  .footer {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-address {
+    flex: 1 1 220px;
+}
+
+.footer-about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.social-icons img {
+    width: 24px;
+    margin-right: 10px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #00d1b2;
+    text-decoration: none;
+}
