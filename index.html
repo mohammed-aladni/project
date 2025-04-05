@@ -109,12 +109,17 @@
       <button class="tab active" onclick="showCards(event, 'medical')">Medical</button>
       <button class="tab" onclick="showCards(event, 'engineering')">Engineering</button>
       <button class="tab" onclick="showCards(event, 'law')">Law</button>
+      <button class="tab" onclick="showCards(event, 'computerscience')">computer science</button>
+      <button class="tab" onclick="showCards(event, 'commerce')">commerce</button>
+      <button class="tab" onclick="showCards(event, 'IT')">IT</button>
     </div>
   
     <div class="card-container" id="cardContainer">
       <!-- Cards will be inserted here -->
     </div>
   </section>
+
+  
   
   
   
@@ -155,6 +160,18 @@
     law: [
       { title: 'LLB', subtitle: 'Law - Bachelor' },
       { title: 'LLM', subtitle: 'Law - Master' },
+    ],
+    computerscience: [
+      { title: 'CSB', subtitle: 'computer science - Bachelor' },
+      { title: 'CSM', subtitle: 'computer science - Master' },
+    ],
+    commerce: [
+      { title: 'CB', subtitle: 'commerce - Bachelor' },
+      { title: 'CM', subtitle: 'commerce- Master' },
+    ],
+    IT: [
+      { title: 'ITB', subtitle: 'IT- Bachelor' },
+      { title: 'ITM', subtitle: 'IT- Master' },
     ]
   };
 
