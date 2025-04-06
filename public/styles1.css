@@ -97,3 +97,37 @@ textarea {
 .hidden {
     display: none;
 }
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex: 1;
+    text-decoration: none; /* removes the underline */
+    color: inherit;         /* optional: keeps your original text color */
+      }
+      
+  
+  
+  .nav-center {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    justify-content: center;
+    flex: 2;
+  }
+  
+  .nav-center a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
