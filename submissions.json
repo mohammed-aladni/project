@@ -25,5 +25,14 @@
     "service": "consultation",
     "message": "3",
     "timestamp": "2025-04-06T10:30:48.691Z"
+  },
+  {
+    "firstName": "mohammed",
+    "lastName": "alhakem",
+    "email": "mohammed8aladni@gmail.com",
+    "phone": "09742262677",
+    "service": "sales",
+    "message": "fuck you",
+    "timestamp": "2025-04-06T10:35:54.755Z"
   }
 ]
